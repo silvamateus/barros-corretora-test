@@ -52,10 +52,7 @@ exports.cssLoaders = function (options) {
     postcss: generateLoaders(),
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass',{
-      includePaths: [ path.resolve('./src/assets') ],
-      data: `@import "~${path.resolve('./src/assets/settings')}";`
-  }),
+    scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }

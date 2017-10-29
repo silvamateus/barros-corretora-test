@@ -1,10 +1,8 @@
 <template>
 <section>
-        <p class='house-hfirst'></p>
+        <img src="/static/img/casa2.png">
         <p>aaaaaaa</p>
     </section>
 </template>
 
-<style lang="scss">
-    @import '../../assets/sass/components/houses.scss';
-</style>
+
