@@ -1,5 +1,8 @@
 <template>
-    <house-card class="flex-show -row"></house-card>
+    <div>
+        <house-card class="flex-show -row"></house-card>
+    </div>
+    
 </template>
 
 <script>

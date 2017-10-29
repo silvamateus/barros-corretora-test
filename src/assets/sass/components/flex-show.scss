@@ -5,5 +5,8 @@
     }
     &.-row{
         flex-direction: row;
+        > :nth-child(1) {
+            padding-right: 1em;
+        }
     }
 }
