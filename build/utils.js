@@ -43,6 +43,7 @@ exports.cssLoaders = function (options) {
     } else {
       return ['vue-style-loader'].concat(loaders)
     }
+
   }
 
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html
@@ -51,7 +52,10 @@ exports.cssLoaders = function (options) {
     postcss: generateLoaders(),
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
+    scss: generateLoaders('sass',{
+      includePaths: [ path.resolve('./src/assets') ],
+      data: `@import "~${path.resolve('./src/assets/settings')}";`
+  }),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }
