@@ -24,7 +24,7 @@ export default {
 
 
 <style lang="scss">
-    .features{
+    #house-features{
         display: flex;
         justify-content: flex-start;
     }
