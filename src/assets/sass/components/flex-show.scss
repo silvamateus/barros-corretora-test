@@ -1,12 +1,43 @@
 .flex-show{
     display: flex;
+    flex-wrap: wrap;
     &.-column{
         flex-direction: column;
+        
     }
     &.-row{
         flex-direction: row;
-        > :nth-child(1) {
-            padding-right: 1em;
+        align-content: center;
+        justify-content: space-around;
+        vertical-align: space-between;                
+        &div{
+            flex-basis:calc(50% + 2em);
+        }
+    }
+}
+
+img{
+    width: 46%;
+    height: 100%;
+}
+
+
+div{
+    flex-basis:50%;
+    &.flex-card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-end;
+        max-width: 100%;
+        margin: 1em;
+        
+        div{
+             h3{
+                align-self: flex-start;
+                font-size: 15px;
+            }
         }
     }
 }

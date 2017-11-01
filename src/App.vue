@@ -1,8 +1,7 @@
 
 <template>
   <div id="app">
-    <dont-say>
-      <card></card>
+    <dont-say class="houses">
     </dont-say>
   </div>
 </template>
@@ -10,9 +9,7 @@
 <script>
 import Vue from 'vue'
 import Dont from './components/Images.vue'
-import Card from './components/atoms/CardAligned.vue'
 
-Vue.component('card', Card)
 Vue.component('dont-say', Dont)
 
 export default {
@@ -23,4 +20,9 @@ export default {
 
 <style lang="scss">
   @import './assets/sass/app.scss';
+  .houses {
+  justify-content: space-around;
+  flex-shrink: 0;
+  max-width: 70%;
+}
 </style>
