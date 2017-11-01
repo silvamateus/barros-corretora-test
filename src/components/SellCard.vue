@@ -91,11 +91,11 @@ export default {
 
 <style lang="scss">
 .coiso {
-  max-width: 70%;
   font-size: 9px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  flex: 0 50%;
   > .align-feature {
     width: 6em;
     text-align: left;
@@ -110,7 +110,6 @@ export default {
 .align-feature {
   display: inline-flex;
   justify-content:flex-start;
-  align-content: flex-start;
   line-height: 1.2em;
 }
 </style>
