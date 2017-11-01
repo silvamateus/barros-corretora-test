@@ -1,14 +1,18 @@
 <template>
     <div>
-      <h3>Destaques venda</h3>
+      <header class='featured'>
+        <div class='sells'>
+           Destaques venda<div class='chevron'></div>
+        </div> 
+        <div class='rent'> Destaques aluguel</div> 
+      </header>
       <div  class="flex-show -row"> 
-        <div class="" v-for="house in houses" :key="house.id" >
-            <div class='flex-card'>
-              <img class='' :src="'/static/houses/' + house.image" >
-              <div>
-                  <h3>{{house.type}}</h3>
-                  <h3>{{house.title}}</h3>
-                  <div class="coiso">
+        <div class='flex-card' v-for="house in houses" :key="house.id" >
+          <img :src="'/static/houses/' + house.image" >
+              <div class='inner-column'>
+                  <p class="title">{{house.type}}</p>
+                  <p class="title">{{house.title}}</p>
+                  <div class='coiso'>
                     <div class='align-feature' >
                       <fa-icon class='red-icon' name='arrows-alt'></fa-icon>
                       <span>{{house.size}}</span></div>
@@ -22,11 +26,10 @@
                       <fa-icon class='red-icon' name='car'></fa-icon>
                       <span>{{house.garage}}</span></div>
                   </div>
-                  <h4>{{house.price}}</h4>
+                  <div class='price'>{{house.price}}<button></button></div>
                 </div>
             </div>
         </div> 
-    </div>
     </div>
 </template>
 
@@ -88,13 +91,70 @@ export default {
 };
 </script>
 
+<style lang='scss'>
 
-<style lang="scss">
+$font-general: #9a3235;
+$font-highlight: #913135;
+$font-inactive: #cb8387;
+
+
+button{
+  background-color: transparent;
+  background-image: url('/static/icons/plus-button.png');
+  background-repeat: no-repeat;
+  background-size: 1em;
+  height: 1.5em;
+  border:0;
+  margin-left: 18px;
+  font-size:1em;
+  box-shadow: unset;
+}
+
+.featured{
+  display: flex;
+  justify-content: center;
+  font-size: 1.7em;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+   >.sells{
+      flex-basis: 29%;
+      color: $font-highlight;
+      > div{
+        margin-top: 0.5em;
+        margin-left: 5.5em;
+      }
+      >.chevron {
+          background-image: url('/static/icons/chvron-down.png');
+          background-repeat: no-repeat;
+          height: 2em;
+          width: 4em;
+          }
+    }
+  > .rent{
+    flex-basis: 19%;
+    color:$font-inactive;
+    margin-right: 5em;
+  }
+}
+.inner-column{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1em;
+}
+p{
+  &.title{
+    font-size: 14px;
+    }
+  
+  }
+
 .coiso {
+  padding-top: 1em;
   font-size: 9px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   flex: 0 50%;
   > .align-feature {
     width: 6em;
@@ -103,18 +163,22 @@ export default {
 }
 .red-icon {
   padding-right: 0.3em;
-  color: red;
+  color: $font-general;
   height: 1.1em;
 }
 
 .align-feature {
   display: inline-flex;
-  justify-content: left space-around;
+  justify-content: space-between;
   line-height: 1.2em;
   > span{
     flex-basis: 80%;
   }
 }
+
+.price{
+    color: $font-general;
+  }
 </style>
 
 

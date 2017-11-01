@@ -7,36 +7,30 @@
     }
     &.-row{
         flex-direction: row;
-        align-content: center;
-        justify-content: space-around;
-        vertical-align: space-between;                
-        &div{
-            flex-basis:calc(50% + 2em);
-        }
+        width: 50em;
+        margin: 0 auto;
     }
 }
 
 img{
-    width: 46%;
     height: 100%;
 }
 
+.flex-card{
+    width: 50%;
+    height: 8em;
+    padding-top: 1em;
+}
 
 div{
     flex-basis:50%;
     &.flex-card{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: center;
-        align-items: flex-end;
-        max-width: 100%;
-        margin: 1em;
-        div{
-             h3{
-                align-self: flex-start;
-                font-size: 15px;
-            }
+        margin: 0 auto;
+        .inner-column{
+            height: 100%;
+            width: 100%;
         }
     }
 }

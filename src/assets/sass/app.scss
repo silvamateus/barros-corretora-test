@@ -1,18 +1,22 @@
-//variables and defaults settings
+
+ // variables and defaults settings
 @import '../../settings';
 
-//default flexbox container
+ // default flexbox container
 @import './components/flex-show.scss';
 
-//destaques imagens
-@import './components/houses.scss';
 
+//variables
+$font-body:'Open Sans', sans-serif;
 
+//general styles
 *{
     box-sizing: border-box;
 }
 
 p,h1,h2,h3,h4,input,textarea,div,span{
-    font-family: 'Open Sans', sans-serif;
+    font-family:$font-body;
     margin:0;
 }
+
+
