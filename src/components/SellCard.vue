@@ -109,8 +109,11 @@ export default {
 
 .align-feature {
   display: inline-flex;
-  justify-content:flex-start;
+  justify-content: left space-around;
   line-height: 1.2em;
+  > span{
+    flex-basis: 80%;
+  }
 }
 </style>
 
